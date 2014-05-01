@@ -17,8 +17,8 @@ import javax.mail.internet.MimeMultipart;
 /**
  * Sender Mail
  * 
- * @description 本程序用于来自谢先斌毕业论文，如有使用请联系作�?�?发�?邮件
- * @URL 代码地址：http://github.com/openRDF/rdfcode
+ * @description 本程序用于来自谢先斌毕业论文，如有使用请联系作 者，注明出处。
+ * @URL 代码地址：http://github.com/openRDF/rdf_fronts
  * @dateTime 2014-3-22 下午7:43:59
  * @author XieXianbin
  * @email a.b@hotmail.com

@@ -5,8 +5,8 @@ import java.util.Properties;
 /**
  * E-mail bean
  * 
- * @description 本程序用于来自谢先斌毕业论文，如有使用请联系作者
- * @URL 代码地址：http://github.com/openRDF/rdfcode
+ * @description 本程序用于来自谢先斌毕业论文，如有使用请联系作 者，注明出处。
+ * @URL 代码地址：http://github.com/openRDF/rdf_fronts
  * @dateTime 2014-3-22 下午6:47:59
  * @author XieXianbin
  * @email a.b@hotmail.com

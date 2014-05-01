@@ -5,10 +5,10 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
- * Utils���߰�
+ * Utils工具类
  * 
- * @description ��������������л�ȱ��ҵ���ģ�����ʹ������ϵ���ߡ�
- * @URL �����ַ��http://github.com/openRDF/rdfcode
+ * @description 本程序用于来自谢先斌毕业论文，如有使用请联系作 者，注明出处。
+ * @URL 代码地址：http://github.com/openRDF/rdf_fronts
  * @rdf com.openrdf.utils
  * @dateTime 2014-2-27 
  * @author XieXianbin
@@ -19,7 +19,7 @@ import java.util.UUID;
 public class Utils {
 
 	/**
-	 * ��ȡ��ǰʱ�䣬��ʽ�磺2014-2-28
+	 * 获取日期，格式：2014-2-28
 	 */
 	public static String getDate(){
 		Date date = new Date();
@@ -28,7 +28,7 @@ public class Utils {
 	}
 	
 	/**
-	 * ��ȡ��ǰʱ�䣬��ʽ�磺2014-2-28 0:12:27
+	 * 获取日期时间，格式：2014-2-28 0:12:27
 	 */
 	public static String getDateTime(){
 		Date date = new Date();
@@ -37,11 +37,11 @@ public class Utils {
 	}
 	
 	/**
-	 * ���UUID������Ψһ�ı�ʶһ���û�id
+	 * 生成一个uuid
 	 */
 	
 	public static UUID geneUUID(){
-		// ���һ��UUID
+		// 随机生成UUID
 		UUID uuid = UUID.randomUUID();
 		return uuid;
 	}

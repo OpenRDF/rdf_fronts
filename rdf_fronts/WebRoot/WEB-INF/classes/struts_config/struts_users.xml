@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="users" extends="struts-default" namespace="/**/users">
+		<!-- global redirect -->
+		<!-- 
+		<global-results>
+			<result name="error" type="redirect">/error.jsp</result>
+			<result name="login" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">login</param>
+			</result>
+		</global-results>
+		 -->
+		<!-- 注册 -->
+		<!--
+		<action name="register" class="usersFrontAction" method="doRegister">
+			<result name="input">/register_n.jsp</result>
+ 			<result name="reg_success" type="redirectAction">
+			<param name="namespace">/main/users</param>
+			<param name="actionName">initRegister</param>
+			</result>
+		</action>
+		 -->
+		<!-- AJAX -->
+		<!-- 
+		<action name="check" class="usersAction" method="checkLoginAccount"></action>
+		 -->
+	</package>
+</struts>

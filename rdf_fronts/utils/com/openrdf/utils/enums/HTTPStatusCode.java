@@ -3,8 +3,8 @@ package com.openrdf.utils.enums;
 /**
  * HTTPStatusCode
  * 
- * @description 本程序用于来自谢先斌毕业论文，如有使用请联系作者。
- * @URL 代码地址：http://github.com/openRDF/rdfcode
+ * @description 本程序用于来自谢先斌毕业论文，如有使用请联系作 者，注明出处。
+ * @URL 代码地址：http://github.com/openRDF/rdf_fronts
  * @rdf package com.openrdf.utils.enums;
  * @dateTime 2014-4-7
  * @author XieXianbin

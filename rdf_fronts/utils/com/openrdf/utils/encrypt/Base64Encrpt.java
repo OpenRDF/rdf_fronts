@@ -3,8 +3,8 @@ package com.openrdf.utils.encrypt;
 /**
  * Base64Encrpt 加密与解密的工具类
  * 
- * @description 本程序用于来自谢先斌毕业论文，如有使用请联系作者。
- * @URL 代码地址：http://github.com/openRDF/rdfcode
+ * @description 本程序用于来自谢先斌毕业论文，如有使用请联系作 者，注明出处。
+ * @URL 代码地址：http://github.com/openRDF/rdf_fronts
  * @rdf com.openrdf.utils
  * @dateTime 2014-2-27 
  * @author XieXianbin
