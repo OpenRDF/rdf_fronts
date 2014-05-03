@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -11,7 +12,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>新用户注册 -- 知识库系统</title>
+<title>用户注册 -- 知识库系统</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -39,20 +40,28 @@
 	<div id="content">
 		<div id="content-inner">
 			<div id="reg_content">
-				<form autocomplete="off" id="reg-form" method="POST">
+				<form action="/users/register" autocomplete="off" id="reg-form" method="POST">
 					<p id="errorWrapper">
 						<span id="error" class="pass-generalError"></span>
 					</p>
 					<p id="account" class="pass-form-item" style="display:">
-						<label id="accountLabel" class="pass-label pass-label-account">注册邮箱</label> <input id="account_input" type="text" name="account_input" class="pass-text-input pass-text-input-account"
-							autocomplete="off" placeholder="邮箱"> <span id="account_clearbtn" class="pass-clearbtn pass-clearbtn-account" style="display:none;"></span> <span id="accountError"
-							class="pass-item-error pass-item-error-account" style="display: none;"></span> <span id="accountSucc" class="pass-item-succ pass-item-succ-account" style="display: none;"></span>
+						<label id="accountLabel" class="pass-label pass-label-account">注册邮箱</label> 
+						<s:textfield id="userLoginEmail" type="text" name="userLogin.userLoginEmail" cssClass="pass-text-input pass-text-input-account"
+							autocomplete="off" placeholder="邮箱"> </s:textfield>
+							<span id="account_clearbtn" class="pass-clearbtn pass-clearbtn-account" style="display:none;"></span> 
+							<span id="accountError"
+							class="pass-item-error pass-item-error-account" style="display: none;"></span> 
+							<span id="accountSucc" class="pass-item-succ pass-item-succ-account" style="display: none;"></span>
 					</p>
 					<p id="password" class="pass-form-item pass-form-item-password" style="display:">
-						<label class="pass-label pass-label-password">密码</label> <input id="TANGRAM__PSP_4__password" type="password" name="password" class="pass-text-input pass-text-input-password" autocomplete="off"
-							placeholder="密码"> <span id="password_clearbtn" class="pass-clearbtn pass-clearbtn-password" style="display:none;"></span> <span id="passwordError"
-							class="pass-item-error pass-item-error-password" style="display: none;"></span> <span class="pwd-strength-detail" style="display: none;">请输入密码</span> <span id="passwordSucc"
-							class="pass-item-succ pass-item-succ-password" style="display:none;"></span>
+						<label class="pass-label pass-label-password">密码</label> 
+						<s:textfield id="password" type="password" name="userLogin.password" cssClass="pass-text-input pass-text-input-password" autocomplete="off"
+							placeholder="密码"> </s:textfield>
+							<span id="password_clearbtn" class="pass-clearbtn pass-clearbtn-password" style="display:none;"></span> 
+							<span id="passwordError"
+							class="pass-item-error pass-item-error-password" style="display: none;"></span> 
+							<span class="pwd-strength-detail" style="display: none;">请输入密码</span> 
+							<span id="passwordSucc" class="pass-item-succ pass-item-succ-password" style="display:none;"></span>
 					<div class="pwd-checklist-wrapper">
 						<ul id="pwdChecklist" class="pwd-checklist">
 							<li id="pwd_checklist_len" data-rule="len" class="pwd-checklist-item" style="display:none;">长度为6~14个字符</li>
@@ -62,10 +71,13 @@
 					</div>
 					</p>
 					<p id="password" class="pass-form-item pass-form-item-password" style="display:">
-						<label class="pass-label pass-label-password">再次输入密码</label> <input id="TANGRAM__PSP_4__password" type="password" name="password" class="pass-text-input pass-text-input-password"
-							autocomplete="off" placeholder="重复密码"> <span id="password_clearbtn" class="pass-clearbtn pass-clearbtn-password" style="display:none;"></span> <span id="passwordError"
-							class="pass-item-error pass-item-error-password" style="display: none;"></span> <span class="pwd-strength-detail" style="display: none;">再次输入密码</span> <span id="passwordSucc"
-							class="pass-item-succ pass-item-succ-password" style="display:none;"></span>
+						<label class="pass-label pass-label-password">再次输入密码</label> 
+						<s:textfield id="re_password" type="password" name="re_password" cssClass="pass-text-input pass-text-input-password"
+							autocomplete="off" placeholder="重复密码"> </s:textfield>
+							<span id="password_clearbtn" class="pass-clearbtn pass-clearbtn-password" style="display:none;"></span> 
+							<span id="passwordError" class="pass-item-error pass-item-error-password" style="display: none;"></span> 
+							<span class="pwd-strength-detail" style="display: none;">再次输入密码</span> 
+							<span id="passwordSucc" class="pass-item-succ pass-item-succ-password" style="display:none;"></span>
 					<div class="pwd-checklist-wrapper">
 						<ul id="pwdChecklist" class="pwd-checklist">
 							<li id="pwd_checklist_len" data-rule="len" class="pwd-checklist-item" style="display:none;">长度为6~14个字符</li>
