@@ -5,25 +5,21 @@
 
 	<!-- http://lvqingboy-163-com.iteye.com/blog/689565 -->
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations">
-			<list>
-				<value>classpath:jdbc.properties</value>
-			</list>
-		</property>
+		<property name="location" value="/WEB-INF/classes/jdbc.properties" />
 	</bean>
 
 	<!-- 参照地址： http://www.cnblogs.com/wj-wangjun/archive/2009/10/21/1587624.html -->
 	<!-- database connect pool -->
 	<!-- database connect pool -->
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 		<!-- database driver -->
-		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="driverClass" value="${jdbc.driverClass}"></property>
 		<!-- database URL -->
-		<property name="jdbcUrl" value="jdbc:mysql://192.168.0.3:3306/openrdf?characterEncoding=utf-8" />
+		<property name="jdbcUrl" value="${jdbc.jdbcUrl}" />
 		<!-- MySql user -->
 		<property name="user" value="${jdbc.user}"></property>
 		<!-- MySql password -->
-		<property name="password" value="root"></property>
+		<property name="password" value="${jdbc.password}"></property>
 		<!-- initialize database connect pool -->
 		<property name="initialPoolSize" value="10"></property>
 		<!-- minimum pool size -->
@@ -72,10 +68,19 @@
 	<!-- mail -->
 	<!-- 指定登录邮箱的用户名、密码 <property name="username" value="spring_test"/> <property name="password" value="123abc"/> </bean> 定义SimpleMailMessage Bean，它代表了一份邮件 <bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage"> <property name="from" value="spring_test@163.com"/> 指定邮件标题 <property name="subject" value="注册通知"/> </bean> -->
 	<!-- 配置业务逻辑组件 -->
-	<!-- Action -->
-	<!-- <bean id="loginAction" scope="prototype" class="action.LoginAction"></bean> -->
-	<bean id="toRegisterPage" class="com.openrdf.action.base.BaseAction">
+	<!-- public base Dao -->
+	<bean name="openRDFBaseDao" class="com.openrdf.base.dao.OpenRDFBaseDao">
+		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	<!-- public base Service -->
+	<bean name="openRDFBaseService" class="com.openrdf.base.service.OpenRDFBaseService">
+		<property name="openRDFBaseDao" ref="openRDFBaseDao"></property>
+	</bean>
+	<!-- public base Action -->
+	<bean name="openRDFBaseAction" class="com.openrdf.base.action.OpenRDFBaseAction">
+		<property name="openRDFBaseService" ref="openRDFBaseService"></property>
+	</bean>
+	
 	<!-- import sprint configuration -->
-	<!-- <import resource="spring_config/spring_include.xml"/> -->
+	<import resource="spring_config/spring_include.xml"/>
 </beans>

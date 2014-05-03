@@ -2,8 +2,10 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
 	<!-- root action -->
+	<!-- 跳转首页 -->
+	<bean id="toIndexPage" class="com.openrdf.base.action.BaseAction" singleton="false" />
 	<!-- 跳转注册页面 -->
-	<bean id="toRegisterPage" class="com.openrdf.action.base.BaseAction" singleton="false" />
+	<bean id="toRegisterPage" class="com.openrdf.base.action.BaseAction" singleton="false" />
 	<!-- 跳转登录页面 -->
-	<bean id="toLoginPage" class="com.openrdf.action.base.BaseAction" singleton="false" />
+	<bean id="toLoginPage" class="com.openrdf.base.action.BaseAction" singleton="false" />
 </beans>

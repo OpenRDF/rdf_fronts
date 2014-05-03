@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
+	<!-- users dao -->
+	<bean id="registerUserDao" class="com.openrdf.dao.UsersDao" parent="openRDFBaseDao" singleton="false">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 	<!-- users service -->
-	<!-- 
-	<bean id="usersService" class="com.**Service" parent="**Service" singleton="false">
+	<bean id="registerUserService" class="com.openrdf.service.UsersService" parent="openRDFBaseService" singleton="false">
 	</bean>
-	 -->
 	<!-- users action -->
-	<!-- 
-	<bean id="usersAction" class="com.**Action" parent="**" singleton="false">
-		<property name="usersService" ref="usersService" />
+	<bean id="registerUserAction" class="com.openrdf.action.UserAction" parent="openRDFBaseAction" singleton="false">
+		<property name="registerUserService" ref="registerUserService" />
 	</bean>
-	 -->
 </beans>
