@@ -25,11 +25,11 @@ public class URLPropertiesUtils {
 	// URL地址属性
 	private static Properties URLProperties = null; 
 	// CAS
-	public static String RDF_CAS_HREF="RDF_CAS_HREF";
+	public static final String RDF_CAS_HREF="RDF_CAS_HREF";
 	// 后台
-	public static String RDF_BACKEND_HREF="RDF_BACKEND_HREF";
+	public static final String RDF_BACKEND_HREF="RDF_BACKEND_HREF";
 	// 前台
-	public static String RDF_FRONTS_HREF="RDF_FRONTS_HREF";
+	public static final String RDF_FRONTS_HREF="RDF_FRONTS_HREF";
 	
 	// 获取URL地址 
 	public static String getPropertiesUrl(String URLKey){
@@ -40,12 +40,14 @@ public class URLPropertiesUtils {
 	public static Properties getURLProperties(){
 		if(URLProperties == null){
 			// 系统发布路径
-			String systemPath = URLPropertiesUtils.class.getClassLoader().getParent().toString();
+			String systemPath = URLPropertiesUtils.class.getClassLoader().getResource("/").getPath();
 			// 网址配置文件位置
-			String proFilePath = systemPath + "WEB-INF/classes/url.properties"; 
+			String proFilePath = systemPath + "url.properties"; 
+			log.debug(proFilePath);
 			InputStream inputStream = null;
 			try {
 				inputStream = new FileInputStream(proFilePath);
+				URLProperties = new Properties();
 				URLProperties.load(inputStream);
 			} catch (FileNotFoundException e) {
 //				e.printStackTrace();
