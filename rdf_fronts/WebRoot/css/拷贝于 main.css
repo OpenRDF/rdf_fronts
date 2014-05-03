@@ -1,0 +1,194 @@
+/* CSS Document */
+
+body{
+display:block;
+background: #fff;
+color: #292f33;
+font-size: 14px;
+line-height: 18px;
+overflow-y: scroll;
+margin:0;
+}
+html, body, #doc, #page-outer{
+height:100%;
+}
+
+body .user-style{
+background-color:#516a84;
+}
+body .ms-windows{
+font-family: Arial,sans-serif;
+}
+
+div{
+display:block;
+}
+
+.topbar {
+border-bottom: 1px solid #e8e8e8;
+border-bottom: 1px solid rgba(0,0,0,0.05);
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+z-index: 1000;
+}
+
+#banners {
+width: auto;
+}
+
+.global-nav {
+border-bottom: 1px solid rgba(0,0,0,0.15);
+height: 46px;
+position: relative;
+width: 100%;
+background: transparent;
+background-repeat: repeat-x;
+background-image: url(../images/bgs.png);
+}
+
+.global-nav .container {
+max-width: 1190px;
+text-align: center;
+width: auto;
+}
+
+.container {
+position: relative;
+width: 890px;
+margin: 0 auto;
+}
+
+.global-nav [role=navigation], .nav, .nav>li {
+float: left;
+}
+
+.nav {
+margin-right: 12px;
+text-align: left;
+}
+
+ol, ul {
+margin: 0;
+list-style: none;
+padding: 0;
+}
+
+ul, menu, dir {
+display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+
+#global-actions>li {
+height: 46px;
+overflow: hidden;
+}
+
+.nav>li {
+color: #66757f;
+position: relative;
+}
+
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+
+ol, ul {
+list-style: none;
+}
+
+#global-actions>li>a {
+border-bottom: 4px solid #0084b4;
+transition: all .15s ease-in-out;
+}
+
+.nav>li>a, .nav>li>button {
+color: inherit;
+display: block;
+font-size: 13px;
+font-weight: 500;
+height: 46px;
+line-height: 1;
+padding: 0 14px 0 4px;
+}
+
+.nav li a {
+position: relative;
+font-size: 12px;
+}
+
+a {
+color: #3b88c3;
+text-decoration: none;
+}
+
+a {
+background: transparent;
+}
+
+a:-webkit-any-link {
+color: -webkit-link;
+text-decoration: underline;
+cursor: auto;
+}
+
+.nav>li {
+color: #66757f;
+}
+
+li {
+text-align: -webkit-match-parent;
+}
+
+.nav>li .Icon {
+float: left;
+margin: 11px 0 0 10px;
+width: 23px;
+height: 23px;
+}
+
+.Icon--large {
+font-size: 21px;
+line-height: 1;
+}
+
+.Icon {
+background: transparent;
+font-style: normal;
+display: inline-block;
+vertical-align: baseline;
+}
+
+.Icon--home:before {
+content: "\f053";
+}
+
+.Icon:before {
+display: block;
+font-family: "rosettaicons";
+font-weight: normal;
+font-style: normal;
+text-align: center;
+-webkit-font-smoothing: antialiased;
+}
+
+.nav>li>a, .nav>li>button {
+color: inherit;
+font-size: 13px;
+font-weight: 500;
+line-height: 1;
+}
+
+li {
+text-align: -webkit-match-parent;
+}
+
+
+

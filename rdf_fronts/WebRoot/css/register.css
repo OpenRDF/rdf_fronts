@@ -1,0 +1,281 @@
+/* CSS Document */
+
+body{
+display:block;
+background: #FFFFFF;
+color: #292f33;
+font-size: 14px;
+line-height: 18px;
+overflow-y: scroll;
+margin:0;
+}
+
+dl, ul, li, ol, dt, dd, a, span{display:block; margin:0px; padding:0px;}
+
+div {
+display: block;
+}
+
+#head{
+height: 75px;
+z-index: 100;
+}
+
+#head-inner{
+width: 1080px;
+margin-left: auto;
+margin-right: auto;
+height: 75px;
+z-index: 100;
+}
+
+.head-inner-left{
+width: 500px;
+height: 75px;
+float: left;
+}
+
+.head-inner-right{
+float: right;
+width: 250px;
+/*height: 75px;*/
+padding-top: 40px;
+}
+
+.head-inner-right span{
+float: left;
+display: block;
+margin-right: 5px;
+margin-top: 6px;
+height: 22px;
+line-height: 22px;
+color: #666;
+}
+
+#login-btn{
+font-weight: bold;
+color: #666;
+height: 32px;
+width: 64px;
+margin-top: 5px;
+border: none;
+background-color: #ddd;
+cursor: pointer;
+background-color: #f8f8f8;
+font-size: 14px;
+text-align: center;
+float: left;
+}
+
+.login-btn {
+font-weight: bold;
+color: #666;
+height: 32px;
+width: 64px;
+border: none;
+background: url(../images/reg_icons.png) no-repeat 0 -48px;
+}
+
+#head-inner .logo{
+float:left;
+}
+
+#head-inner i{
+height: 25px;
+width: 1px;
+margin-top: 45px;
+margin-bottom: 5px;
+background-color: #0c9abe;
+display: -moz-inline-stack;
+display: inline-block;
+vertical-align: middle;
+zoom: 1;
+float: left;
+}
+
+#head-inner .info{
+width: 200px;
+height: 40px;
+line-height: 40px;
+margin-top: 35px;
+margin-left: 10px;
+float: left;
+font-size: 24px;
+}
+
+#nav{
+background: none;
+}
+
+#nav .nav-2{
+height: 20px;
+background: url(../images/reg.png) no-repeat center top;
+}
+
+.clearfix {
+zoom: 1;
+}
+
+.clearfix:after {
+content: '\20';
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+overflow: hidden;
+}
+
+#content{
+height: 380px;
+}
+
+#content-inner{
+width: 1080px;
+height: 380px;
+margin-left: auto;
+margin-right: auto;
+}
+
+#reg_content{
+width: 650px;
+height: 380px;
+float: left;
+}
+
+#reg_content p {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+#reg_content .pass-generalError {
+color: #fc4343;
+display: block;
+height: 40px;
+font-size: 12px;
+line-height: 40px;
+}
+
+#reg_content .pass-form-item {
+position: relative;
+clear: both;
+margin-bottom: 20px;
+zoom: 1;
+overflow: hidden;
+}
+
+#reg_content .pass-label {
+cursor: default;
+display: block;
+float: left;
+height: 42px;
+width: 65px;
+margin-right: 10px;
+line-height: 42px;
+font-size: 14px;
+color: #666;
+font-weight: bold;
+text-align: right;
+}
+
+#reg_content .pass-text-input {
+display: block;
+position: relative;
+float: left;
+/* height: 16px;*/
+width: 400px;
+padding: 11px 10px 11px 10px;
+margin-right: 10px;
+border: 1px solid #ddd;
+font-size: 14px;
+color: #666;
+transition: .3s;
+-moz-transition: .3s;
+-o-transition: .3s;
+-webkit-transition: .3s;
+}
+
+.pass-form-item-isAgree {
+padding-left: 75px;
+}
+
+.pass-checkbox-isAgree{
+float: left;
+margin-top: 3px;
+margin-right: 5px;
+}
+
+.pass-form-item-submit {
+position: relative;
+left: 75px;
+}
+
+.pass-button-submit {
+background-color: #008fb5;
+float: left;
+width: 400px;
+height: 34px;
+color: #fff;
+cursor: pointer;
+text-align: center;
+border: 0;
+line-height: 32px;
+}
+
+.pass-button {
+display: block;
+height: 50px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+color: #fff;
+background-image: none;
+border-radius: 3px;
+border: none;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+transition: .3s;
+-moz-transition: .3s;
+-o-transition: .3s;
+-webkit-transition: .3s;
+}
+
+#reg_center {
+width: 1px;
+height: 380px;
+overflow: hidden;
+float: left;
+background: url(../images/reg_center.png) no-repeat;
+margin-left: 20px;
+}
+
+#reg_others{
+width: 380px;
+height: 380px;
+float: left;
+}
+
+#reg_others span{
+margin-top: 70px;
+line-height: 30px;
+height: 30px;
+color: #666;
+font-family: "����";
+font-size: 14px;
+
+}
+
+.account3{
+padding-top: 90px;
+width: 380px;
+height: 290px;
+font-weight: bold;
+
+}
+
+.account-detail li{
+padding-left: 45px;
+height: 45px;
+}
