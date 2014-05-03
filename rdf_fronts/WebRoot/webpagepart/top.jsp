@@ -1,4 +1,9 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 		<!-- topbar -->
 		<div id="topbar">
 			<div id="global-top">
@@ -12,7 +17,7 @@
 					</div>
 					<div class="global-top-middle-right">
 						<ul class="topbar-right">
-							<li class="login"><a href="login">登录</a></li>
+							<li class="login"><a href='<s:property value="rdf_cas_href"/>/login?service=<%=basePath%>'>登录</a></li>
 							<i></i>
 							<li class="register"><a href="register">注册</a></li>
 							<i></i>

@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%@ taglib prefix="s" uri="http://java.sun.com/jstl/core" %>
+<%@ taglib prefix="s" uri="/struts-tags" %> 
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -9,7 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="head-inner">
 			<div class="head-inner-left">
 				<ul>
-					<li class="logo"><a href="$RDF_CAS_HREF"
+					<li class="logo">
+						<a href="<s:property value="rdf_fronts_href"/>"
 						style="display: block; height: 50px; width: 200px; padding-top: 25px;">
 							<img src="images/logo_reg.png" alt="logo" />
 					</a></li>
@@ -19,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div class="head-inner-right">
 				<span>我已注册，现在就</span>
-				<button class="login-btn" id="login_btn">登录</button>
+				<button class="login-btn" onclick="window.location.href='${rdf_cas_href}/login?service=<%=basePath%>'" id="login_btn">登录</button>
 			</div>
 		</div>
 	</div>
