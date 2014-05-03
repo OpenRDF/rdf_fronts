@@ -52,6 +52,19 @@
         </filter>
     </appender>
 
+    <appender name="log4jLogDEBUG2" class="org.apache.log4j.ConsoleAppender">
+        <param name="File" value="/var/log/rdf.log"/>
+        <param name="Append" value="true"/>
+        <param name="MaxFileSize" value="512KB"/>
+        <param name="MaxBackupIndex" value="10"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%p (%c:%L)- %m%n"/>
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="DEBUG"/>
+            <param name="LevelMax" value="DEBUG"/>
+        </filter>
+    </appender>
 
     <!--通过<category></category>的定义可以将各个包中的类日志输出到不同的日志文件中-->
     <!-- 
@@ -66,6 +79,7 @@
         <priority value="debug"/>
         <appender-ref ref="log4jDebug" />
         <appender-ref ref="log4jLogInfo" />
+        <appender-ref ref="log4jLogDEBUG2" />
     </root>
 </log4j:configuration>
 
