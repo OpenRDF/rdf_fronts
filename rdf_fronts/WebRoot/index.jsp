@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -6,21 +6,47 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-    <base href="<%=basePath%>">
-    
-    <title>My JSP 'index.jsp' starting page</title>
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
+<head>
+<base href="<%=basePath%>">
+
+<title>知识库系统 -- 首页</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-  </head>
-  
-  <body>
-    This is my JSP page. <br>
-  </body>
+<link type="text/css" rel="stylesheet" href="./css/main.css"
+	media="screen" charset="utf-8">
+</head>
+
+<body class="user-style ms-windows">
+	<!-- body -->
+	<div class="profile">
+		<!-- topbar -->
+		<jsp:include page="webpagepart/top.jsp" />
+		<!-- container -->
+		<div id="container">
+			<div id="container-inner">
+				<div class="container-logo"></div>
+
+
+				<div class="search-div">
+					<input type="text" name="keyword" id="keyword" maxlength="100"
+						style="width:474px; height:32px;" autocomplete="off"> <input
+						type="submit" value="搜索" id="search-button" class="btn">
+				</div>
+
+
+
+
+
+			</div>
+		</div>
+		<!-- bottom -->
+		<jsp:include page="webpagepart/bottom.jsp"></jsp:include>
+	</div>
+</body>
 </html>

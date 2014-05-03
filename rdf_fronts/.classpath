@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="utils"/>
 	<classpathentry kind="src" path="jUnit"/>
+	<classpathentry kind="src" path="server"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
@@ -34,17 +35,11 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-codec-1.4.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-collections-3.1.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-collections-3.2.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-collections-3.2.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-dbcp.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-fileupload-1.2.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-io-1.3.2.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-io-2.0.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-jexl-1.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-lang-2.4.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-lang-2.5.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging-1.0.4.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging-1.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-pool.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ezmorph-1.0.4.jar"/>
@@ -60,7 +55,6 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/junit-4.10.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/log4j-1.2.15.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mail.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ognl-2.7.3.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/org.springframework.aop-3.0.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/org.springframework.asm-3.0.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/org.springframework.aspects-3.0.0.RELEASE.jar"/>
@@ -94,8 +88,12 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-web-3.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-webflow-2.2.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-webmvc-3.0.5.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/struts2-core-2.1.8.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/tomcat-dbcp.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xwork-core-2.1.6.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ognl-3.0.6.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/struts2-core-2.3.15.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/struts2-json-plugin-2.3.15.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xwork-core-2.3.15.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-io-1.3.2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/struts2-spring-plugin-2.3.15.1.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

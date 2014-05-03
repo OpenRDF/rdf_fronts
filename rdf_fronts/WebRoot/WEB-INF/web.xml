@@ -1,23 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	version="2.4">
 	<display-name>RDF web v1.0</display-name>
-	<description>This Java Web Project Was Created By Xie Xianbin, Using for The Graduation Design of RDF OS.</description>
+	<description>This Java Web Project Was Created By Xianbin Xie, Using for The Graduation Design of RDF OS.</description>
 	
-	<!-- Enhance Struts2 configuration ** struts Framework -->
-    <filter>  
-        <filter-name>struts2</filter-name>  
-        <filter-class>  
-          org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter  
-        </filter-class>  
-    </filter>  
-    <filter-mapping>  
-        <filter-name>struts2</filter-name>  
-        <url-pattern>/*</url-pattern>  
-    </filter-mapping>
-    
-    <!-- spring configuration -->
+	<!-- spring configuration -->
     <!-- Spring Framework -->  
 	<listener>  
 	    <listener-class>  
@@ -31,7 +19,18 @@
 	        /WEB-INF/applicationContext*.xml  
 	    </param-value>  
 	</context-param> 
-    
+	
+	<!-- Enhance Struts2 configuration ** struts Framework -->
+    <filter>  
+        <filter-name>struts2</filter-name>  
+        <filter-class>  
+          org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter  
+        </filter-class>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>struts2</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping>
 	
 	<!-- 以下是log4j的配置 -->
 	<!--

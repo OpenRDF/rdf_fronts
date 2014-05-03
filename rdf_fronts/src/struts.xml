@@ -22,10 +22,14 @@
 	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
 	<!-- 视图主题 -->
 	<constant name="struts.ui.theme" value="simple"></constant>
+	<!-- 配置访问去除action -->
+	<constant name="struts.action.extension" value=","/>
 	
 	<!-- 导入其他模块 -->
+	<!-- root -->
+	<include file="struts_config/struts_root.xml"></include>
 	<!-- users -->
-	<include file="struts_config/struts_users.xml"></include>
+	<!-- <include file="struts_config/struts_users.xml"></include> -->
 	
 	<!-- 在当前目录下导入实例 -->
 	<!-- 

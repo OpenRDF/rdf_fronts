@@ -5,6 +5,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/utils"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/jUnit"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/server"/>
         <property name="context-root" value="rdf_fronts"/>
         <property name="java-output-path" value="/rdf_fronts/WebRoot/WEB-INF/classes"/>
     </wb-module>

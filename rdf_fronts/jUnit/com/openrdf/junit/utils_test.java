@@ -2,7 +2,7 @@ package com.openrdf.junit;
 
 import junit.framework.TestCase;
 
-import com.openrdf.utils.Utils;
+import com.openrdf.utils.date.Utils;
 
 public class utils_test extends TestCase {
 
