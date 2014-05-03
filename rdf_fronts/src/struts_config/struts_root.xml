@@ -2,14 +2,21 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 	<package name="/" namespace="/" extends="struts-default">
-		<!-- global redirect -->
+		<!-- global redirect 
 		<global-results>
 			<result name="error" type="redirect">/error.jsp</result>
-		</global-results>
-		
+		</global-results>-->
+		<!-- 跳转到首页 -->
+		<action name="index" class="toIndexPage" method="toIndexPage">
+			<result name="success">/index.jsp</result>
+		</action>
 		<!-- 跳转到注册页面 -->
 		<action name="register" class="toRegisterPage" method="toRegisterPage">
-			<result name="success" type="redirect">/register.jsp</result>
+			<result name="success">/register.jsp</result>
+		</action>
+		<!-- 跳转到登录页面 -->
+		<action name="login" class="toLoginPage" method="toLoginPage">
+			<result name="success">/register.jsp</result>
 		</action>
 		<!-- AJAX -->
 		<!-- <action name="check" class="usersAction" method="checkLoginAccount"></action> -->
