@@ -76,7 +76,7 @@
 	 -->
 	<!-- 根logger的设置-->
     <root>
-        <priority value="debug"/>
+        <priority value="info"/>
         <appender-ref ref="log4jDebug" />
         <appender-ref ref="log4jLogInfo" />
         <appender-ref ref="log4jLogDEBUG2" />

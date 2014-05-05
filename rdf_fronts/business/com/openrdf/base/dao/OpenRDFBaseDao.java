@@ -1,5 +1,15 @@
 package com.openrdf.base.dao;
 
-public class OpenRDFBaseDao {
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
+public class OpenRDFBaseDao extends HibernateDaoSupport{
+	
+	
+	SessionFactory sessionFactory;
+
+	
+    
+      
 }
