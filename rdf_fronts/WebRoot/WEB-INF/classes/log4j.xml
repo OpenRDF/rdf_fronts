@@ -53,10 +53,6 @@
     </appender>
 
     <appender name="log4jLogDEBUG2" class="org.apache.log4j.ConsoleAppender">
-        <param name="File" value="/var/log/rdf.log"/>
-        <param name="Append" value="true"/>
-        <param name="MaxFileSize" value="512KB"/>
-        <param name="MaxBackupIndex" value="10"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%p (%c:%L)- %m%n"/>
         </layout>
