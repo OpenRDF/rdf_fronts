@@ -3,21 +3,15 @@
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd  
     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd" default-autowire="byName">
 
-	<!-- http://lvqingboy-163-com.iteye.com/blog/689565 -->
-	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="location" value="/WEB-INF/classes/jdbc.properties" />
-	</bean>
-
 	<!-- 参照地址： http://www.cnblogs.com/wj-wangjun/archive/2009/10/21/1587624.html -->
 	<!-- database connect pool -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="${jdbc.driverClassName}">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver">
 		</property>
-		<property name="url"
-			value="${jdbc.url}">
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/openrdf?characterEncoding=utf-8">
 		</property>
-		<property name="username" value="${jdbc.username}"></property>
-		<property name="password" value="${jdbc.password}"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
 	</bean>
 
 	<!-- 依赖注入数据源，注入上面定义的dataSource -->
@@ -50,5 +44,5 @@
 		</property>
 	</bean>
 	<!-- import sprint configuration -->
-	<import resource="spring_config/spring_include.xml"/>
+	<import resource="spring_config/spring_include.xml" />
 </beans>

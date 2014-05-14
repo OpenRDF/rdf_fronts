@@ -40,7 +40,7 @@
 	<div id="content">
 		<div id="content-inner">
 			<div id="reg_content">
-				<form action="/users/register" autocomplete="off" id="reg-form" method="POST">
+				<form action="users/register" autocomplete="off" id="reg-form" method="POST">
 					<p id="errorWrapper">
 						<span id="error" class="pass-generalError"></span>
 					</p>
@@ -91,7 +91,7 @@
 							target="_blank" href="http://***/protocal.html" style="float: left;">《知识库系统使用协议》</a>
 					</p>
 					<p id="submitWrapper" class="pass-form-item pass-form-item-submit">
-						<input id="reg_submit" type="submit" value="注册" class="pass-button pass-button-submit">
+						<input id="reg_submit" type="submit" value="注册" class="pass-button pass-button-submit" onclick= "javascript:document.form.submit()">
 					</p>
 				</form>
 			</div>
