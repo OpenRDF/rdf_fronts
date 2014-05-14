@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!-- body -->
 	<div class="profile">
 		<!-- topbar -->
-		<jsp:include page="webpagepart/top.jsp" />
+		<jsp:include page="pagepart/top.jsp" />
 		<!-- container -->
 		<div id="container">
 			<div id="container-inner">
@@ -47,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 		</div>
 		<!-- bottom -->
-		<jsp:include page="webpagepart/bottom.jsp"></jsp:include>
+		<jsp:include page="pagepart/bottom.jsp"></jsp:include>
 	</div>
 </body>
 </html>

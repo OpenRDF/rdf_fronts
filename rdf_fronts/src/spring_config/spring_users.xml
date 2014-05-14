@@ -2,14 +2,14 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
 	<!-- users dao -->
-	<bean id="registerUserDao" class="com.openrdf.dao.UsersDao" parent="openRDFBaseDao" singleton="false">
+	<bean id="registerUserDao" class="com.openrdf.dao.UsersDao" singleton="false">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	<!-- users service -->
-	<bean id="registerUserService" class="com.openrdf.service.UsersService" parent="openRDFBaseService" singleton="false">
+	<bean id="registerUserService" class="com.openrdf.service.UsersService" singleton="false">
 	</bean>
 	<!-- users action -->
-	<bean id="registerUserAction" class="com.openrdf.action.UserAction" parent="openRDFBaseAction" singleton="false">
+	<bean id="registerUserAction" class="com.openrdf.action.UserAction" singleton="false">
 		<property name="registerUserService" ref="registerUserService" />
 	</bean>
 </beans>

@@ -28,7 +28,7 @@
 
 <body class="user-style ms-windows">
 	<!-- body -->
-	<jsp:include page="webpagepart/head_register.jsp"></jsp:include>
+	<jsp:include page="pagepart/head_register.jsp"></jsp:include>
 	<!-- nav -->
 	<div id="nav">
 		<div class="nav-2">
@@ -109,6 +109,6 @@
 	</div>
 
 	<!-- bottom -->
-	<jsp:include page="webpagepart/bottom.jsp"></jsp:include>
+	<jsp:include page="pagepart/bottom.jsp"></jsp:include>
 </body>
 </html>

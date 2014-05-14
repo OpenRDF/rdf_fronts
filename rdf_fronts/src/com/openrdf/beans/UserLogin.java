@@ -4,7 +4,7 @@ package com.openrdf.beans;
  * UserLogin entity. @author MyEclipse Persistence Tools
  */
 
-public class UserLogin implements java.io.Serializable {
+public class UserLogin {
 
 	// Fields
 
