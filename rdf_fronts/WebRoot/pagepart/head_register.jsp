@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="head-inner-left">
 				<ul>
 					<li class="logo">
-						<a href="<s:property value="rdf_fronts_href"/>"
+						<a href="<s:property value="rdf_fronts_href"/>/index"
 						style="display: block; height: 50px; width: 200px; padding-top: 25px;">
 							<img src="images/logo_reg.png" alt="logo" />
 					</a></li>
