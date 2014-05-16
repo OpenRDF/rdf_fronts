@@ -8,10 +8,7 @@
 		</global-results>
 		<!-- 注册 -->
 		<action name="register" class="registerUserAction" method="registerUserAction">
-			<result name="success" type="redirectAction">
-				<param name="namespace">/</param>
-				<param name="actionName">login</param>
-			</result>
+			<result name="success">/users/info.jsp</result>
 			<result name="illegalEmail">/register.jsp</result>
 		</action>
 		<!-- 认证邮箱 -->
