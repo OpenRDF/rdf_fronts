@@ -1,5 +1,6 @@
 package com.openrdf.utils;
 
+import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.UUID;
@@ -37,6 +38,27 @@ public class Utils {
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance();
 		return dateFormat.format(date);
+	}
+	
+	/**
+	 * 返回自 1970 年 1 月 1 日 00:00:00 GMT 以来此 Date 对象表示的毫秒数。
+	 * 
+	 * @return long
+	 */
+	public static long getCurrentTimeMillis(){
+		Date date = new Date();
+		return date.getTime();
+	}
+	
+	/**
+	 * 通过秒数获取当前的时间
+	 * 
+	 * @param timeMillis
+	 * @return 2014-05-16 10:23:45.823
+	 */
+	public static String getDateTimeBySecond(long timeMillis){
+		Timestamp timestamp = new Timestamp(timeMillis);
+		return timestamp.toString();
 	}
 	
 	/**

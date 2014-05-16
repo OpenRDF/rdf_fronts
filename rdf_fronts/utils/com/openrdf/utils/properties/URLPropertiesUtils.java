@@ -1,4 +1,4 @@
-package com.openrdf.utils.url.properties;
+package com.openrdf.utils.properties;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
  * 
  * @description 本程序用于来自谢先斌毕业论文，如有使用请联系作 者，注明出处。
  * @URL 代码地址：http://github.com/openRDF/rdf_fronts
- * @rdf com.openrdf.utils.url.properties
+ * @rdf com.openrdf.utils.properties
  * @dateTime 2014-5-2
  * @author XieXianbin
  * @email a.b@hotmail.com
