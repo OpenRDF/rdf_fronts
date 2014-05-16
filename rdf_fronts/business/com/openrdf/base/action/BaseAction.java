@@ -1,6 +1,6 @@
 package com.openrdf.base.action;
 
-import com.openrdf.utils.url.properties.URLPropertiesUtils;
+import com.openrdf.utils.properties.URLPropertiesUtils;
 
 public class BaseAction extends OpenRDFBaseAction {
 
