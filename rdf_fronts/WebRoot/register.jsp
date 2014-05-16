@@ -43,7 +43,7 @@
 			<div id="reg_content">
 				<form action="users/register" autocomplete="off" id="reg-form" method="POST">
 					<p id="errorWrapper">
-						<span id="error" class="pass-generalError">${illegalEmail}</span>
+						<span id="error" class="pass-generalError">${wrongReason}</span>
 					</p>
 					<p id="account" class="pass-form-item" style="display:">
 						<label id="accountLabel" class="pass-label pass-label-account">注册邮箱</label> 
@@ -56,8 +56,8 @@
 					</p>
 					<p id="password" class="pass-form-item pass-form-item-password" style="display:">
 						<label class="pass-label pass-label-password">密码</label> 
-						<s:textfield id="password" type="password" name="userLogin.password" cssClass="pass-text-input pass-text-input-password" autocomplete="off"
-							placeholder="密码"> </s:textfield>
+						<s:password id="password" type="password" name="userLogin.password" cssClass="pass-text-input pass-text-input-password" autocomplete="off"
+							placeholder="密码"> </s:password>
 							<span id="password_clearbtn" class="pass-clearbtn pass-clearbtn-password" style="display:none;"></span> 
 							<span id="passwordError"
 							class="pass-item-error pass-item-error-password" style="display: none;"></span> 
@@ -73,8 +73,8 @@
 					</p>
 					<p id="password" class="pass-form-item pass-form-item-password" style="display:">
 						<label class="pass-label pass-label-password">再次输入密码</label> 
-						<s:textfield id="re_password" type="password" name="re_password" cssClass="pass-text-input pass-text-input-password"
-							autocomplete="off" placeholder="重复密码"> </s:textfield>
+						<s:password id="re_password" type="password" name="re_password" cssClass="pass-text-input pass-text-input-password"
+							autocomplete="off" placeholder="重复密码"> </s:password>
 							<span id="password_clearbtn" class="pass-clearbtn pass-clearbtn-password" style="display:none;"></span> 
 							<span id="passwordError" class="pass-item-error pass-item-error-password" style="display: none;"></span> 
 							<span class="pwd-strength-detail" style="display: none;">再次输入密码</span> 
