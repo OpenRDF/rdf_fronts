@@ -30,8 +30,8 @@
                 <comment>user alipay account</comment>
             </column>
         </property>
-        <property name="accountCreateTime" type="date">
-            <column name="accountCreateTime" length="0">
+        <property name="accountCreateTime" type="long">
+            <column name="accountCreateTime">
                 <comment>account create time</comment>
             </column>
         </property>
@@ -78,6 +78,11 @@
         <property name="userEmail" type="string">
             <column name="userEmail" length="30">
                 <comment>user Email 1</comment>
+            </column>
+        </property>
+        <property name="emailAuthentication" type="integer">
+            <column name="emailAuthentication">
+                <comment>email authentication(0 no, 1 yes)</comment>
             </column>
         </property>
         <property name="userEmail1" type="string">

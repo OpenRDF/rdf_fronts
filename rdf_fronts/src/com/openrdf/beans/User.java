@@ -1,7 +1,5 @@
 package com.openrdf.beans;
 
-import java.util.Date;
-
 /**
  * User entity. @author MyEclipse Persistence Tools
  */
@@ -15,7 +13,7 @@ public class User {
 	private String userPass;
 	private String userStatus;
 	private String aliPayAccount;
-	private Date accountCreateTime;
+	private Long accountCreateTime;
 	private Integer userAge;
 	private String userBirthday;
 	private String userSex;
@@ -25,6 +23,7 @@ public class User {
 	private String userAddress;
 	private String userPostCode;
 	private String userEmail;
+	private Integer emailAuthentication;
 	private String userEmail1;
 	private String userEmail2;
 	private String userPhone;
@@ -47,10 +46,11 @@ public class User {
 
 	/** full constructor */
 	public User(String userId, String userName, String userPass,
-			String userStatus, String aliPayAccount, Date accountCreateTime,
+			String userStatus, String aliPayAccount, Long accountCreateTime,
 			Integer userAge, String userBirthday, String userSex,
 			String userCountry, String userProvince, String userCity,
 			String userAddress, String userPostCode, String userEmail,
+			Integer emailAuthentication,
 			String userEmail1, String userEmail2, String userPhone,
 			String userQq, String userMsn, String userBriefInfroduction,
 			double userBalance, String userOthers) {
@@ -69,6 +69,7 @@ public class User {
 		this.userAddress = userAddress;
 		this.userPostCode = userPostCode;
 		this.userEmail = userEmail;
+		this.emailAuthentication = emailAuthentication;
 		this.userEmail1 = userEmail1;
 		this.userEmail2 = userEmail2;
 		this.userPhone = userPhone;
@@ -121,11 +122,11 @@ public class User {
 		this.aliPayAccount = aliPayAccount;
 	}
 
-	public Date getAccountCreateTime() {
+	public Long getAccountCreateTime() {
 		return this.accountCreateTime;
 	}
 
-	public void setAccountCreateTime(Date accountCreateTime) {
+	public void setAccountCreateTime(Long accountCreateTime) {
 		this.accountCreateTime = accountCreateTime;
 	}
 
@@ -199,6 +200,14 @@ public class User {
 
 	public void setUserEmail(String userEmail) {
 		this.userEmail = userEmail;
+	}
+
+	public Integer getEmailAuthentication() {
+		return emailAuthentication;
+	}
+
+	public void setEmailAuthentication(Integer emailAuthentication) {
+		this.emailAuthentication = emailAuthentication;
 	}
 
 	public String getUserEmail1() {
