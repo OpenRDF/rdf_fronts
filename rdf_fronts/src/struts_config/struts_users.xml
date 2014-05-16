@@ -12,6 +12,7 @@
 				<param name="namespace">/</param>
 				<param name="actionName">login</param>
 			</result>
+			<result name="illegalEmail">/register.jsp</result>
 		</action>
 	</package>
 </struts>

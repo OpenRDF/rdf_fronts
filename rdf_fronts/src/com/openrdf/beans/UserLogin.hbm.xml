@@ -7,7 +7,7 @@
 <hibernate-mapping>
     <class name="com.openrdf.beans.UserLogin" table="user_login">
         <id name="userId" type="string">
-            <column name="userId" length="20" />
+            <column name="userId" length="50" />
             <generator class="assigned" />
         </id>
         <property name="userLoginEmail" type="string">

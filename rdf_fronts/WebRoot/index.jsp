@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %> 
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -16,11 +16,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 <!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-<link type="text/css" rel="stylesheet" href="./css/main.css"
-	media="screen" charset="utf-8">
+<link type="text/css" rel="stylesheet" href="./css/main.css" media="screen" charset="utf-8">
 </head>
 
 <body class="user-style ms-windows">
@@ -35,9 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 				<div class="search-div">
-					<input type="text" name="keyword" id="keyword" maxlength="100"
-						style="width:474px; height:32px;" autocomplete="off"> <input
-						type="submit" value="搜索" id="search-button" class="btn">
+					<input type="text" name="keyword" id="keyword" maxlength="100" style="width:474px; height:32px;" autocomplete="off"> <input type="submit" value="搜索" id="search-button" class="btn">
 				</div>
 
 

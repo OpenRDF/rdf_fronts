@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div class="head-inner-right">
 				<span>我已注册，现在就</span>
-				<button class="login-btn" onclick="window.location.href='${rdf_cas_href}/login?service=<%=basePath%>'" id="login_btn">登录</button>
+				<button class="login-btn" onclick="window.location.href='${rdf_cas_href}/login?service=<%=java.net.URLEncoder.encode(basePath) %>'" id="login_btn">登录</button>
 			</div>
 		</div>
 	</div>

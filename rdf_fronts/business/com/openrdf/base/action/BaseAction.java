@@ -17,13 +17,20 @@ public class BaseAction extends OpenRDFBaseAction {
 	}
 	
 	public String toLoginPage(){
-		// redirect to register page
+		// redirect to login page
 		rdf_cas_href = URLPropertiesUtils.getPropertiesUrl(URLPropertiesUtils.RDF_CAS_HREF);
 		return "success";
 	}
 	
 	public String toRegisterPage(){
-		// redirect to login page 
+		// redirect to register page 
+		rdf_fronts_href = URLPropertiesUtils.getPropertiesUrl(URLPropertiesUtils.RDF_FRONTS_HREF);
+		rdf_cas_href = URLPropertiesUtils.getPropertiesUrl(URLPropertiesUtils.RDF_CAS_HREF);
+		return "success";
+	}
+	
+	public String toProtocalPage(){
+		// redirect to protocal page 
 		rdf_fronts_href = URLPropertiesUtils.getPropertiesUrl(URLPropertiesUtils.RDF_FRONTS_HREF);
 		rdf_cas_href = URLPropertiesUtils.getPropertiesUrl(URLPropertiesUtils.RDF_CAS_HREF);
 		return "success";

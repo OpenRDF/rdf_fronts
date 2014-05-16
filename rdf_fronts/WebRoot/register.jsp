@@ -19,6 +19,7 @@
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 <!--
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		-->
@@ -42,7 +43,7 @@
 			<div id="reg_content">
 				<form action="users/register" autocomplete="off" id="reg-form" method="POST">
 					<p id="errorWrapper">
-						<span id="error" class="pass-generalError"></span>
+						<span id="error" class="pass-generalError">${illegalEmail}</span>
 					</p>
 					<p id="account" class="pass-form-item" style="display:">
 						<label id="accountLabel" class="pass-label pass-label-account">注册邮箱</label> 
@@ -88,7 +89,7 @@
 					</p>
 					<p id="isAgreeWrapper" class="pass-form-item pass-form-item-isAgree">
 						<input name="isAgree" id="isAgree" type="checkbox" checked="checked" class="pass-checkbox-input pass-checkbox-isAgree" autocomplete="off"> <label style="float: left;">我已阅读并接受</label> <a
-							target="_blank" href="http://***/protocal.html" style="float: left;">《知识库系统使用协议》</a>
+							target="_blank" href="<%=basePath%>protocal" style="float: left;">《知识库系统使用协议》</a>
 					</p>
 					<p id="submitWrapper" class="pass-form-item pass-form-item-submit">
 						<input id="reg_submit" type="submit" value="注册" class="pass-button pass-button-submit" onclick= "javascript:document.form.submit()">
