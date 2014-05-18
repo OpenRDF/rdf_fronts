@@ -8,13 +8,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    <title>跳转</title>
+    <title>知识库系统</title>
   </head>
   
   <body>
     <script type="text/javascript">
 	function toIndex(){
-		location.href = "<%=basePath%>index";
+		location.href = "<%=basePath%>home";
 	}
 	toIndex();
 </script>

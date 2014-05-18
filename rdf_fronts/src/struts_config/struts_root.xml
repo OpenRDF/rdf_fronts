@@ -7,7 +7,7 @@
 			<result type="redirect">/error.jsp</result>
 		</global-results>
 		<!-- 跳转到首页 -->
-		<action name="index" class="toPulbicPage" method="toIndexPage" >
+		<action name="home" class="toPulbicPage" method="toIndexPage" >
 			<result name="success">/index.jsp</result>
 		</action>
 		<!-- 跳转到注册页面 -->
