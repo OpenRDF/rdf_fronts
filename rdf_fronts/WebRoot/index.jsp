@@ -30,16 +30,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<jsp:include page="pagepart/top.jsp" />
 		<!-- container -->
 		<div id="container">
-			${session }
-			<%
-				AttributePrincipal principal = (AttributePrincipal) request.getUserPrincipal();
-				//Map attributes = principal.getAttributes(); 
-				//if(attributes==null){
-				//	System.out.println("null");
-				//}else{
-					System.out.println(principal);
-	//			}
-			%>
 			<div id="container-inner">
 				<div class="container-logo"></div>
 

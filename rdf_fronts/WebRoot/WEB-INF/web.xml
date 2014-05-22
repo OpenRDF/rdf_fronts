@@ -50,6 +50,15 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
+	<!-- spring configuration -->
+	<context-param>
+		<description>spring configuration file</description>
+	    <param-name>contextConfigLocation</param-name>  
+	    <param-value>  
+	        /WEB-INF/classes/applicationContext*.xml  
+	    </param-value>  
+	</context-param> 
+	
 	<!-- ======================== 单点登录开始 ======================== -->
 	<!-- 用于单点退出，该过滤器用于实现单点登出功能，可选配置 -->
 	<listener>
@@ -82,7 +91,7 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>CAS Filter</filter-name>
-		<url-pattern>/login*</url-pattern>
+		<url-pattern>/login/*</url-pattern>
 	</filter-mapping>
 
 	<!-- 该过滤器负责对Ticket的校验工作，必须启用它 -->
@@ -130,15 +139,6 @@
 	</filter-mapping>
 	
 	<!-- ======================== 单点登录结束 ======================== -->
-	
-	<!-- spring configuration -->
-	<context-param>
-		<description>spring configuration file</description>
-	    <param-name>contextConfigLocation</param-name>  
-	    <param-value>  
-	        /WEB-INF/classes/applicationContext*.xml  
-	    </param-value>  
-	</context-param> 
 	
 	<!-- 加载spring配置文件applicationContext.xml -->
 	<listener>  

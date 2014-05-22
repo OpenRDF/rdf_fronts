@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!DOCTYPE struts PUBLIC     
-    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"     
-    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
 <struts>
 	<!-- struts configuration -->
 	<!-- struts 文件的加载规则。若为true，修改struts文件后系统重新加载。  -->
