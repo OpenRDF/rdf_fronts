@@ -30,6 +30,8 @@ public class URLPropertiesUtils {
 	public static final String RDF_BACKEND_HREF="RDF_BACKEND_HREF";
 	// 前台
 	public static final String RDF_FRONTS_HREF="RDF_FRONTS_HREF";
+	// rdf file location 
+	public static final String RDF_FILE_LOCATION="RDF_FILE_LOCATION";
 	
 	// 获取URL地址 
 	public static String getPropertiesUrl(String URLKey){
@@ -58,6 +60,7 @@ public class URLPropertiesUtils {
 			}finally{
 				if(inputStream != null){
 					try {
+//						System.out.println(URLProperties.get(URLPropertiesUtils.RDF_FILE_LOCATION));
 						// 关闭文件流 
 						inputStream.close();
 					} catch (IOException e) {
