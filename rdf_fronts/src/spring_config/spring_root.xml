@@ -3,4 +3,19 @@
 <beans>
 	<!-- 跳转公共URL -->
 	<bean id="toPulbicPage" class="com.openrdf.base.action.BaseAction" singleton="false" />
+	
+	<!-- search dao -->
+	<bean id="searchDao" class="com.openrdf.dao.SearchDao" singleton="false" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- search service -->
+	<bean id="searchService" class="com.openrdf.service.SearchService" singleton="false">
+		<property name="searchDao" ref="searchDao"></property>
+	</bean>
+	
+	<!-- search action -->
+	<bean id="searchAction" class="com.openrdf.action.SearchAction" singleton="false">
+		<property name="searchService" ref="searchService" />
+	</bean>
 </beans>

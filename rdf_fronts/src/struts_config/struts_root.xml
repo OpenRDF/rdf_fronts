@@ -6,21 +6,35 @@
 		<global-results>
 			<result type="redirect">/error.jsp</result>
 		</global-results>
+
 		<!-- 跳转到首页 -->
-		<action name="home" class="toPulbicPage" method="toIndexPage" >
+		<action name="home" class="toPulbicPage" method="toIndexPage">
 			<result name="success">/index.jsp</result>
 		</action>
+
 		<!-- 跳转到注册页面 -->
 		<action name="register" class="toPulbicPage" method="toRegisterPage">
 			<result name="success">/register.jsp</result>
 		</action>
+
 		<!-- 跳转到注册页面 -->
 		<action name="protocal" class="toPulbicPage" method="toProtocalPage">
 			<result name="success">/protocal.jsp</result>
 		</action>
+
 		<!-- 跳转到登录页面 -->
 		<action name="login" class="toPulbicPage" method="toLoginPage">
 			<result name="success">/register.jsp</result>
+		</action>
+
+		<!-- 跳转到登录页面 -->
+		<action name="search" class="searchAction" method="searchAction">
+			<result name="success">/search_result.jsp</result>
+			<result name="error">/search_result.jsp</result>
+		</action>
+		
+		<!-- 收藏知识点 -->
+		<action name="storeAction" class="searchAction" method="storeAction">
 		</action>
 		<!-- AJAX -->
 		<!-- <action name="check" class="usersAction" method="checkLoginAccount"></action> -->

@@ -49,6 +49,8 @@
 			<list>
 				<value>com/openrdf/beans/User.hbm.xml</value>
 				<value>com/openrdf/beans/UserLogin.hbm.xml</value>
+				<value>com/openrdf/beans/ConceptStore.hbm.xml</value>
+				<value>com/openrdf/beans/SearchHistory.hbm.xml</value>
 
 
 
