@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="global-top-middle">
 					<div class="global-top-middle-left">
 						<ul class="topbar-left">
-							<li class="local-search"><a href="#">搜本站</a></li>
+							<li class="local-search"><a href="<%=basePath%>home">搜本站</a></li>
 							<i></i>
 							<li class="advance-search"><a href="">高级搜索</a></li>
 						</ul>

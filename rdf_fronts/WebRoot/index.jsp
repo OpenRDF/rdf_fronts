@@ -1,8 +1,10 @@
 <%@ page language="java" import="java.util.*, org.jasig.cas.client.authentication.AttributePrincipal" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -35,7 +37,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 				<div class="search-div">
-					<input type="text" name="keyword" id="keyword" maxlength="100" style="width:474px; height:32px;" autocomplete="off"> <input type="submit" value="搜索" id="search-button" class="btn">
+					<form action="search" method="get">
+						<input type="text" name="keywords" id="keyword" maxlength="100" style="width:474px; height:32px;" autocomplete="off">
+						<input type="submit" value="搜索" id="search-button" class="btn">
+					</form>
 				</div>
 
 
