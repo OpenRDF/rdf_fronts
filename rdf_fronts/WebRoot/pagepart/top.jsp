@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<ul class="topbar-left">
 							<li class="local-search"><a href="<%=basePath%>home">搜本站</a></li>
 							<i></i>
-							<li class="advance-search"><a href="">高级搜索</a></li>
+							<li class="advance-search"><a href="<%=basePath%>dbpedia">高级搜索</a></li>
 						</ul>
 					</div>
 					<div class="global-top-middle-right">

@@ -26,7 +26,7 @@ import net.sf.json.JSONObject;
  * @dateTime 2014-3-23
  * @author XieXianbin
  * @email a.b@hotmail.com
- *
+ * 
  */
 
 public class RESTClient {
@@ -34,51 +34,84 @@ public class RESTClient {
 	private Logger logger = Logger.getLogger(RESTClient.class);
 	private int timeout = 5000;
 	private int cach_size = 5 * 1024 * 1024;
-	
+
 	// get method
-	public String RESTGET(String url){
-		
-		
-		return null;
+	public String RESTGET(String url) {
+		StringBuffer output = new StringBuffer();
+		try {
+			URL url1 = new URL(url);
+			HttpURLConnection conn = (HttpURLConnection) url1.openConnection();
+			conn.setRequestMethod("GET");
+			conn.setRequestProperty("Accept", "application/xml");
+			conn.setRequestProperty("Content-Type", "text/plain; charset=utf-8");
+			if (conn.getResponseCode() != 200) {
+				logger.info("Failed : HTTP error code : " + conn.getResponseCode());
+				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+			}
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					(conn.getInputStream())));
+			String out = null;
+			while ((out = br.readLine()) != null) {
+				output.append(out);
+				output.append("\r\n");
+			}
+			
+			conn.disconnect();
+		} catch (MalformedURLException e) {
+//			e.printStackTrace();
+			logger.info("MalformedURLException");
+			return null;
+		} catch (IOException e) {
+//			e.printStackTrace();
+			logger.info("IOException");
+			return null;
+		}
+		return output.toString();
 	}
-	
-	// post method 
-	public Map<String, Object> RESTPOST(String url, String headers, String payload){
+
+	// post method
+	public Map<String, Object> RESTPOST(String url, String headers,
+			String payload) {
 		try {
 			// vert header to JSON Object
-//			Object headersJSON = JSONObject.fromObject(headers);
-//			byte[] headersByte = String.valueOf(headersJSON).getBytes("UTF-8");
-			// payload 
+			// Object headersJSON = JSONObject.fromObject(headers);
+			// byte[] headersByte =
+			// String.valueOf(headersJSON).getBytes("UTF-8");
+			// payload
 			Object payloadJSON = JSONObject.fromObject(payload);
 			byte[] payloadByte = String.valueOf(payloadJSON).getBytes("UTF-8");
-			
+
 			// URL
 			URL urls = new URL(url);
-			HttpURLConnection httpURLConnection = (HttpURLConnection) urls.openConnection();
+			HttpURLConnection httpURLConnection = (HttpURLConnection) urls
+					.openConnection();
 			// set HTTP URL Connection
 			httpURLConnection.setRequestMethod("POST");
 			httpURLConnection.setConnectTimeout(timeout);
 			httpURLConnection.setDoInput(true);
 			httpURLConnection.setDoOutput(true);
-			httpURLConnection.setRequestProperty("Content-Type", "text/xml; charset=UTF-8");
-			httpURLConnection.setRequestProperty("Content-Length", String.valueOf(payloadByte.length));
-			// request 
+			httpURLConnection.setRequestProperty("Content-Type",
+					"text/xml; charset=UTF-8");
+			httpURLConnection.setRequestProperty("Content-Length",
+					String.valueOf(payloadByte.length));
+			// request
 			OutputStream outputStream = httpURLConnection.getOutputStream();
 			outputStream.write(payloadByte);
 			outputStream.flush();
 			outputStream.close();
-			
+
 			// read response
 			InputStream inputStream = null;
-			if(httpURLConnection.getResponseCode() < 400){
+			if (httpURLConnection.getResponseCode() < 400) {
 				inputStream = httpURLConnection.getInputStream();
-			}else{
+			} else {
 				inputStream = httpURLConnection.getErrorStream();
 			}
-			BufferedReader responseReader = new BufferedReader(new InputStreamReader(inputStream), cach_size);
+			BufferedReader responseReader = new BufferedReader(
+					new InputStreamReader(inputStream), cach_size);
 			StringBuilder responseString = new StringBuilder();
 			String s;
-			while((s = responseReader.readLine()) != null){
+			while ((s = responseReader.readLine()) != null) {
 				responseString.append(s);
 			}
 			responseReader.close();
@@ -89,8 +122,8 @@ public class RESTClient {
 			Map<String, Object> responseMap = new HashMap<String, Object>();
 			responseMap.put("Status", httpURLConnection.getResponseCode());
 			responseMap.put("Response", response);
-			
-			// return 
+
+			// return
 			return responseMap;
 		} catch (UnsupportedEncodingException e) {
 			logger.error("UnsupportedEncodingException");
@@ -101,7 +134,7 @@ public class RESTClient {
 		} catch (IOException e) {
 			logger.error("IOException");
 		}
-		
+
 		return null;
 	}
 }

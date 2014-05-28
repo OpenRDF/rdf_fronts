@@ -13,11 +13,12 @@ import org.apache.struts2.ServletActionContext;
 import com.openrdf.base.action.OpenRDFBaseAction;
 import com.openrdf.beans.Concept;
 import com.openrdf.beans.ConceptStore;
+import com.openrdf.beans.DBPedia;
 import com.openrdf.service.SearchService;
 import com.openrdf.utils.Utils;
 import com.opensymphony.xwork2.ActionContext;
 
-public class SearchAction extends OpenRDFBaseAction  {
+public class SearchAction extends OpenRDFBaseAction {
 
 	private Logger logger = Logger.getLogger(SearchAction.class);
 	private SearchService searchService;
@@ -27,10 +28,11 @@ public class SearchAction extends OpenRDFBaseAction  {
 	private String keywords;
 	// 返回搜索信息
 	private List<Concept> conceptList;
-	
+	// 高级搜索返回值
+	private List<DBPedia> dbpediaList;
 
 	public String searchAction() {
-		
+
 		// 转码字符串
 		keywords = Utils.str(keywords);
 		logger.info("搜索关键字：" + keywords);
@@ -39,7 +41,7 @@ public class SearchAction extends OpenRDFBaseAction  {
 			conceptList = null;
 			return "error";
 		}
-		
+
 		// 获取用户名
 		ActionContext actionContext = ActionContext.getContext();
 		Map<String, Object> session = actionContext.getSession();
@@ -57,7 +59,7 @@ public class SearchAction extends OpenRDFBaseAction  {
 			resultMessage = "success";
 			// keyword = "";
 			for (int i = 0; i < conceptList.size(); i++) {
-				logger.info("第" + i + "个：\n名词（cn）："
+				logger.info("第" + (i + 1) + "个：\n名词（cn）："
 						+ conceptList.get(i).getCnName() + "\n名词（en）："
 						+ conceptList.get(i).getEnName() + "\n定义："
 						+ conceptList.get(i).getSource() + "\n更新时间："
@@ -65,11 +67,11 @@ public class SearchAction extends OpenRDFBaseAction  {
 			}
 		}
 		return "success";
-		
+
 	}
-	
+
 	/**
-	 * 保存收藏词条 ajax 
+	 * 保存收藏词条 ajax
 	 * 
 	 * @return
 	 */
@@ -110,8 +112,40 @@ public class SearchAction extends OpenRDFBaseAction  {
 		}
 		return null;
 	}
-	
-	/***                   getters and setters                       ***/
+
+	public String advanceAction() {
+		// 转码字符串
+		keywords = Utils.str(keywords);
+		logger.info("搜索关键字：" + keywords);
+		if (keywords.equalsIgnoreCase("")) {
+			resultMessage = "请输入关键字。";
+			conceptList = null;
+			return "error";
+		}
+
+		dbpediaList = searchService.advanceSearch(keywords);
+		if (dbpediaList == null || dbpediaList.size() == 0) {
+			resultMessage = "您搜索的关键字不存在。";
+			dbpediaList = null;
+			return "error";
+		} else {
+			resultMessage = "success";
+			// keyword = "";
+			for (int i = 0; i < dbpediaList.size(); i++) {
+				logger.info("第" + (i + 1) + "个：\nLabel："
+						+ dbpediaList.get(i).getLabel() + "\nURI："
+						+ dbpediaList.get(i).getUrl() + "\nDescription："
+						+ dbpediaList.get(i).getDescription());
+			}
+		}
+
+		return "success";
+	}
+
+	public String dbpediaAction(){
+		return "success";
+	}
+	/*** getters and setters ***/
 	public SearchService getSearchService() {
 		return searchService;
 	}
@@ -143,5 +177,13 @@ public class SearchAction extends OpenRDFBaseAction  {
 	public void setConceptList(List<Concept> conceptList) {
 		this.conceptList = conceptList;
 	}
-	
+
+	public List<DBPedia> getDbpediaList() {
+		return dbpediaList;
+	}
+
+	public void setDbpediaList(List<DBPedia> dbpediaList) {
+		this.dbpediaList = dbpediaList;
+	}
+
 }

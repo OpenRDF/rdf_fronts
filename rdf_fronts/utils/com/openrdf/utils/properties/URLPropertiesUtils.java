@@ -32,6 +32,8 @@ public class URLPropertiesUtils {
 	public static final String RDF_FRONTS_HREF="RDF_FRONTS_HREF";
 	// rdf file location 
 	public static final String RDF_FILE_LOCATION="RDF_FILE_LOCATION";
+	// dbpedia api url 
+	public static final String DBPedia_API_URL="DBPedia_API_URL";
 	
 	// 获取URL地址 
 	public static String getPropertiesUrl(String URLKey){

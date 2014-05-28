@@ -271,6 +271,16 @@ padding-right: 20px;
 	height: 105px;
 }
 
+.dbpedia_container-logo {
+	margin-left: 340px;
+	margin-right: 340px;
+	margin-top: 40px;
+	background-image:
+		url(../images/dbpedia_logo.png);
+	width: 400px;
+	height: 105px;
+}
+
 .search-div {
 	width: 590px;
 	height: 32px;
@@ -291,6 +301,15 @@ padding-right: 20px;
 	width: 170px;
 	float: left;
 	background-image: url("../images/result_logo.png");
+}
+
+.search-div-result-logo {
+	margin: 0 15px;
+	padding-top: 10px;
+	height: 70px;
+	width: 170px;
+	float: left;
+	background-image: url("../images/dbpedia.png");
 }
 
 .search-div-result-input{

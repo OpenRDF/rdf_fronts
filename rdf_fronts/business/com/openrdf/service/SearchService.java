@@ -4,11 +4,12 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.openrdf.action.SearchAction;
 import com.openrdf.beans.Concept;
 import com.openrdf.beans.ConceptStore;
+import com.openrdf.beans.DBPedia;
 import com.openrdf.beans.SearchHistory;
 import com.openrdf.dao.SearchDao;
+import com.openrdf.dbpedia.DBPediaOpt;
 import com.openrdf.rdf.JenaParser;
 import com.openrdf.utils.Utils;
 
@@ -66,7 +67,16 @@ public class SearchService {
 			return true;
 		}
 	}
-	
+
+	public List<DBPedia> advanceSearch(String keywords) {
+		
+		DBPediaOpt dbPediaOpt = new DBPediaOpt();
+		List<DBPedia> dbpediaList = dbPediaOpt.getDBPediaByKeyword(keywords);
+		if (dbpediaList == null || dbpediaList.size() == 0){
+			return null;
+		}
+		return dbpediaList;
+	}
 	/***                   getters and setters                       ***/
 	public SearchDao getSearchDao() {
 		return searchDao;
@@ -75,5 +85,6 @@ public class SearchService {
 	public void setSearchDao(SearchDao searchDao) {
 		this.searchDao = searchDao;
 	}
+
 	
 }
