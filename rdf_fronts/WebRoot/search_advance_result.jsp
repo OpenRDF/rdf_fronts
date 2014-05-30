@@ -47,7 +47,7 @@
 								<p>Description：${dbpedia.description }</p>
 								<hr>
 							</c:forEach>
-							<p style="font-size: 14px; color: red">注意：以上结果仅供参考。</p>
+							<p style="font-size: 14px; color: red">注意：以上搜索结果来自DBpedia。</p>
 						</div>
 					</s:if>
 					<s:else>

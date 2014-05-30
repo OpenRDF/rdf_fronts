@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- struts configuration -->
+	<!-- struts 文件的加载规则。若为true，修改struts文件后系统重新加载。  -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<!-- 开发模式下打印更详细的错误信息 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 编码格式 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<!-- 国际化支持 -->
+	<constant name="struts.custom.i18n.resources" value="messages"></constant>
+	<!-- 缓存设置 -->
+	<constant name="struts.serve.static.browserCache" value="false"></constant>
+	<!-- 临时文件存放目录 -->
+	<constant name="struts.multipart.saveDir" value="/opt/tmp/"></constant>
+	<!-- 临时文件大小 -->
+	<constant name="struts.multipart.maxSize" value="1024000"></constant>
+	<!-- 静态访问配置 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<!-- 视图主题 -->
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<!-- 配置访问去除action -->
+	<constant name="struts.action.extension" value=","/>
+	
+	<!-- 导入其他模块 -->
+	<!-- root -->
+	<include file="struts_config/struts_root.xml"></include>
+	<!-- users -->
+	<include file="struts_config/struts_users.xml"></include>
+	
+	<!-- 在当前目录下导入实例 -->
+	<!-- 
+	<package namespace="/" name="struts2" extends="struts-default">
+		<action name="login" method="execute" class="loginAction">
+			<result name="success">/WEB-INF/jsp/login.jsp</result>
+			<result name="input">/WEB-INF/index.jsp</result>
+		</action>
+	</package>
+	 -->
+</struts>

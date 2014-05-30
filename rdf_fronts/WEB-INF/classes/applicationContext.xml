@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd  
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+	<!-- http://blog.csdn.net/dreamrealised/article/details/9123199 -->
+	<!-- 用于读取properties文件，此处将数据库连接的用户名密码等存在jdbc.properties文件中 -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>WEB-INF/classes/jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 参照地址： http://www.cnblogs.com/wj-wangjun/archive/2009/10/21/1587624.html -->
+	<!-- database connect pool -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<!-- database driver -->
+		<property name="driverClass" value="${jdbc.driverClassName}"></property>
+		<!-- database URL -->
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<!-- MySql user -->
+		<property name="user" value="${jdbc.user}"></property>
+		<!-- MySql password -->
+		<property name="password" value="${jdbc.password}"></property>
+		<!-- initialize database connect pool -->
+		<property name="initialPoolSize" value="${jdbc.initialPoolSize}"></property>
+		<!-- minimum pool size -->
+		<property name="minPoolSize" value="${jdbc.minPoolSize}"></property>
+		<!-- Maximum pool size -->
+		<property name="maxPoolSize" value="${jdbc.maxPoolSize}" />
+		<!-- maximum idle time, default 0(s), never drop -->
+		<property name="maxIdleTime" value="${jdbc.maxIdleTime}"></property>
+		<!-- acquireIncrement -->
+		<property name="acquireIncrement" value="${jdbc.acquireIncrement}" />
+		<!-- acquireRetryAttempts -->
+		<property name="acquireRetryAttempts" value="${jdbc.acquireRetryAttempts}" />
+		<!-- idleConnectionTestPeriod -->
+		<property name="idleConnectionTestPeriod" value="${jdbc.idleConnectionTestPeriod}" />
+	</bean>
+
+	<!-- 依赖注入数据源，注入上面定义的dataSource -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<!-- dataSource -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 以下用来列出Hibernate映射文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>com/openrdf/beans/User.hbm.xml</value>
+				<value>com/openrdf/beans/UserLogin.hbm.xml</value>
+				<value>com/openrdf/beans/ConceptStore.hbm.xml</value>
+				<value>com/openrdf/beans/SearchHistory.hbm.xml</value>
+
+
+
+			</list>
+		</property>
+
+		<!-- 定义Hibernate的SessionFactory的属性 -->
+		<property name="hibernateProperties">
+			<props>
+				<!-- 指定数据库方言 -->
+				<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+				<!-- 显示Hibernate持久化操作所生成的SQL -->
+				<prop key="hibernate.show_sql">false</prop>
+				<!-- 将SQL脚本进行格式化后再输出 -->
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.use_sql_comments">true</prop>
+				<prop key="current_session_context_class">thread</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- mail -->
+	<!-- 指定登录邮箱的用户名、密码 <property name="username" value="spring_test"/> <property name="password" value="123abc"/> </bean> 定义SimpleMailMessage Bean，它代表了一份邮件 <bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage"> <property name="from" value="spring_test@163.com"/> 指定邮件标题 <property name="subject" value="注册通知"/> </bean> -->
+	<!-- 配置业务逻辑组件 -->
+
+
+	<!-- Action -->
+	<!-- <bean id="loginAction" scope="prototype" class="action.LoginAction"></bean> -->
+	<!-- import sprint configuration -->
+	<import resource="spring_config/spring_include.xml" />
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="users" extends="struts-default" namespace="/users">
+		<!-- global redirect -->
+		<global-results>
+			<result name="error" type="redirect">/error.jsp</result>
+		</global-results>
+		<!-- 注册 -->
+		<action name="register" class="registerUserAction" method="registerUserAction">
+			<result name="success">/users/info.jsp</result>
+			<result name="illegalEmail">/register.jsp</result>
+		</action>
+		<!-- 认证邮箱 -->
+		<action name="emailAuthentication" class="registerUserAction" method="emailAuthentication">
+			<result name="reEmailAuth">/users/info.jsp</result>
+			<result name="success">/users/info.jsp</result>
+			<result name="userNotFound">/users/info.jsp</result>
+		</action>
+	</package>
+</struts>

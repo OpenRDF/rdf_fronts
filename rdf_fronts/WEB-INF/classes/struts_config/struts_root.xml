@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="/" namespace="/" extends="struts-default">
+		<!-- global redirect -->
+		<global-results>
+			<result type="redirect">/error.jsp</result>
+		</global-results>
+
+		<!-- 跳转到首页 -->
+		<action name="home" class="toPulbicPage" method="toIndexPage">
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<!-- 跳转到注册页面 -->
+		<action name="register" class="toPulbicPage" method="toRegisterPage">
+			<result name="success">/register.jsp</result>
+		</action>
+
+		<!-- 跳转到注册页面 -->
+		<action name="protocal" class="toPulbicPage" method="toProtocalPage">
+			<result name="success">/protocal.jsp</result>
+		</action>
+
+		<!-- 跳转到登录页面 -->
+		<action name="login" class="toPulbicPage" method="toLoginPage">
+			<result name="success">/register.jsp</result>
+		</action>
+
+		<!-- 跳转到登录页面 -->
+		<action name="search" class="searchAction" method="searchAction">
+			<result name="success">/search_result.jsp</result>
+			<result name="error">/search_result.jsp</result>
+		</action>
+		
+		<!-- 收藏知识点 -->
+		<action name="storeAction" class="searchAction" method="storeAction">
+		</action>
+		
+		<!-- 高级搜索 -->
+		<action name="dbpedia" class="searchAction" method="dbpediaAction">
+		<result name="success">/dbpedia_index.jsp</result>
+		</action>
+		
+		<!-- 高级搜索 -->
+		<action name="advance" class="searchAction" method="advanceAction">
+			<result name="success">/search_advance_result.jsp</result>
+			<result name="error">/search_advance_result.jsp</result>
+		</action>
+		<!-- AJAX -->
+		<!-- <action name="check" class="usersAction" method="checkLoginAccount"></action> -->
+	</package>
+</struts>
