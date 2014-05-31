@@ -28,7 +28,7 @@
 			</div>
 		</div>
 		<div class="search-div-result">
-			<div class="search-div-result-logo"></div>
+			<div class="search-div-result-logo-advance"></div>
 			<div class="search-div-result-input">
 				<form action="advance" method="get">
 					<input type="text" name="keywords" value="${keywords }" id="keyword" maxlength="100" style="width:474px; height:32px;" autocomplete="off"> <input type="submit" value="搜索" id="search-button" class="btn">

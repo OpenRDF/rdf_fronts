@@ -122,10 +122,16 @@ public class SearchAction extends OpenRDFBaseAction {
 			conceptList = null;
 			return "error";
 		}
-
-		dbpediaList = searchService.advanceSearch(keywords);
+		
+		try {
+			dbpediaList = searchService.advanceSearch(keywords);
+		} catch (Exception e) {
+			resultMessage = "调用接口异常。";
+			dbpediaList = null;
+			return "error";
+		}
 		if (dbpediaList == null || dbpediaList.size() == 0) {
-			resultMessage = "您搜索的关键字不存在。";
+			resultMessage = "您搜索的关键字不存在";
 			dbpediaList = null;
 			return "error";
 		} else {

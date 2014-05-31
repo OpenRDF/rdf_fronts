@@ -68,7 +68,7 @@ public class SearchService {
 		}
 	}
 
-	public List<DBPedia> advanceSearch(String keywords) {
+	public List<DBPedia> advanceSearch(String keywords) throws Exception {
 		
 		DBPediaOpt dbPediaOpt = new DBPediaOpt();
 		List<DBPedia> dbpediaList = dbPediaOpt.getDBPediaByKeyword(keywords);

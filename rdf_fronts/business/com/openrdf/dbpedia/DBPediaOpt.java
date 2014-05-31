@@ -32,7 +32,7 @@ public class DBPediaOpt extends DefaultHandler {
 	private List<DBPedia> dbpediaList = null;
 	private DBPedia dbPedia = null;
 
-	public List<DBPedia> getDBPediaByKeyword(String keywords) {
+	public List<DBPedia> getDBPediaByKeyword(String keywords) throws Exception {
 
 		List<DBPedia> dbpediaList = new ArrayList<DBPedia>();
 		// 获取调用地址
@@ -48,7 +48,7 @@ public class DBPediaOpt extends DefaultHandler {
 			inputStream = new ByteArrayInputStream(dbpediaXML.getBytes("UTF-8"));
 		} catch (UnsupportedEncodingException e1) {
 //			e1.printStackTrace();
-			return null;
+			throw new Exception("接口异常");
 		}
 		// DOM4J解析XML文件
 		SAXReader saxReader = new SAXReader();
